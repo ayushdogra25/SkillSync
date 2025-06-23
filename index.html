@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#4a90e2">
+    <meta name="description" content="Organize your growth: track skills, list tasks, and conquer your development all in one place - Your Personal Productivity Companion">
+    <title>hello</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original-wordmark.svg">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <!-- Background Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span>SkillSync</span>
+                </div>
+                <div class="greeting">
+                    <h1>Organize your growth: track skills, list tasks, and conquer your development all in one place</h1>
+                    <div class="welcome-container">
+                        <p id="greeting-text">Welcome back, <span id="user-name">User</span>!</p>
+                        
+                    </div>
+                </div>
+                <div class="right-controls">
+                    <div class="timer-container">
+                        <div class="timer-display">
+                            <div class="timer">00:00:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+            <!-- Main Panel -->
+            <div class="main-panel">
+                <!-- Productivity Stats -->
+                <section class="stats-container glass-card">
+                    <div class="stats-content">
+                        <h2>Productivity Stats</h2>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">🔥</div>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="streak">0</span>
+                                    <span class="stat-label">Streak</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">✅</div>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="completed-tasks">0</span>
+                                    <span class="stat-label">Tasks Completed</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">⏱️</div>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="pomodoro-hours">0</span>
+                                    <span class="stat-label">Hours Focused</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">📚</div>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="skills-added">0</span>
+                                    <span class="stat-label">Skills Added</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!-- Task Manager -->
+                <section class="task-manager glass-card">
+                    <div class="task-header">
+                        <h2>Task Manager</h2>
+                        <div class="task-filters">
+                            <select id="task-category">
+                                <option value="all">All Categories</option>
+                            </select>
+                            <select id="task-priority">
+                                <option value="all">All Priority</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                            <input type="text" id="task-search" placeholder="Search tasks...">
+                        </div>
+                    </div>
+                    <div class="task-input">
+                        <input type="text" id="new-task" placeholder="Add a new task...">
+                        <select id="task-category-select">
+                            <option value="">Select Category</option>
+                        </select>
+                        <select id="task-priority-select">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                        <button id="add-task">Add Task</button>
+                    </div>
+                    <ul id="task-list" class="task-list"></ul>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="skills-container glass-card">
+                    <div class="skills-header">
+                        <h2>Skills</h2>
+                        <input type="text" id="skill-search" placeholder="Search skills...">
+                    </div>
+                    <div id="skills-container" class="skills-grid"></div>
+                    <div class="skill-form">
+                        <input type="text" id="new-skill" placeholder="Add new skill...">
+                        <select id="skill-category">
+                            <option value="">Select Category</option>
+                            <option value="programming">Programming</option>
+                            <option value="design">Design</option>
+                            <option value="business">Business</option>
+                            <option value="soft">Soft Skills</option>
+                        </select>
+                        <select id="skill-level">
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                            <option value="expert">Expert</option>
+                        </select>
+                        <button id="add-skill">Add Skill</button>
+                    </div>
+                </section>
+
+                <!-- Statistics Dashboard -->
+                <section class="stats-dashboard glass-card">
+                    <h2>Progress Dashboard</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">🎯</div>
+                            <div class="stat-info">
+                                <span class="stat-number" id="total-tasks">0</span>
+                                <span class="stat-label">Total Tasks</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">✅</div>
+                            <div class="stat-info">
+                                <span class="stat-number" id="completed-tasks">0</span>
+                                <span class="stat-label">Tasks Completed</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📊</div>
+                            <div class="stat-info">
+                                <span class="stat-number" id="skill-progress">0</span>
+                                <span class="stat-label">Skill Progress</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">⏳</div>
+                            <div class="stat-info">
+                                <span class="stat-number" id="streak">0</span>
+                                <span class="stat-label">Current Streak</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section id="projects" class="section">
+                    <div class="projects-container glass-card">
+                        <h2>Projects</h2>
+                        <div class="projects-grid">
+                            <div class="empty-state">
+                                <i class="fas fa-tools"></i>
+                                <p>No projects added yet 🚧</p>
+                                <p>Start adding your projects to showcase your work!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="js/app.js"></script>
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://github.com/ayushdogra25" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/ayush-dogra69" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p class="footer-text">Made with ❤️ by Ayush Dogra</p>
+    </footer>
+</body>
+</html>
