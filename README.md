@@ -1,6 +1,6 @@
 # SkillSync Dashboard
 
-![SkillSync Dashboard](https://raw.githubusercontent.com/ayushdogra25/mundi/main/screenshot.png)
+
 
 A modern, dark-themed productivity dashboard that helps you track your skills, manage tasks, and monitor your progress. Built with HTML, CSS, and JavaScript, this dashboard provides a clean and intuitive interface for personal development tracking.
 
@@ -34,7 +34,7 @@ A modern, dark-themed productivity dashboard that helps you track your skills, m
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ayushdogra25/mundi.git
+git clone https://github.com/ayushdogra25/SkillSync.git
 ```
 
 2. Open `index.html` in your web browser
